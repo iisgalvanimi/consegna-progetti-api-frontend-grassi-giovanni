@@ -13,7 +13,7 @@ export class Carta4Component {
   cardData! : Card;
   constructor(public http: HttpClient)
   {
-    this.obs = this.http.get<Card>("https://api.scryfall.com/cards/named?fuzzy=aust+com");
+    this.obs = this.http.get<Card>("https://api.scryfall.com/cards/named?fuzzy=minds-dilation");
     this.obs.subscribe(this.getCardData)
   }
   getCardData=(cardaData: Card)=> {

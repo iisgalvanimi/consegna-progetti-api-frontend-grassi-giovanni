@@ -13,7 +13,7 @@ export class Carta2Component {
   cardData! : Card;
   constructor(public http: HttpClient)
   {
-    this.obs = this.http.get<Card>("https://scryfall.com/card/teferi-temporal-archmage"); 
+    this.obs = this.http.get<Card>("https://api.scryfall.com/cards/named?fuzzy=brudiclad-telchor-engineer"); 
 
     this.obs.subscribe(this.getCardData)
   }
